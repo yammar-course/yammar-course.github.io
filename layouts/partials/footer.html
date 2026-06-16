@@ -1,0 +1,21 @@
+{{ $isJa := eq .Site.Language.Lang "ja" }}
+{{ $kyotoName := cond $isJa .Site.Params.partner_kyoto_name_ja .Site.Params.partner_kyoto_name_en }}
+{{ $yanmarName := cond $isJa .Site.Params.partner_yanmar_name_ja .Site.Params.partner_yanmar_name_en }}
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <div class="footer-logo-row" aria-hidden="true">
+        <span class="partner-logo-placeholder partner-logo-placeholder--footer"><!-- partner logo: pending approval --></span>
+        <span class="partner-logo-placeholder partner-logo-placeholder--footer"><!-- partner logo: pending approval --></span>
+      </div>
+      <p>{{ .Site.Title }}</p>
+    </div>
+    <div class="site-footer__partners">
+      <h2>{{ .Site.Params.partner_label }}</h2>
+      <ul>
+        <li><a href="{{ .Site.Params.partner_kyoto_url }}" rel="noopener">{{ $kyotoName }}</a></li>
+        <li><a href="{{ .Site.Params.partner_yanmar_url }}" rel="noopener">{{ $yanmarName }}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

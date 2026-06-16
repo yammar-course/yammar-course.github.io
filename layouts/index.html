@@ -1,0 +1,97 @@
+{{ define "main" }}
+  {{ $marked := replaceRE "(?m)^## " "§§" .RawContent }}
+  {{ $parts := split $marked "§§" }}
+  {{ $items := slice }}
+  {{ range $parts }}
+    {{ $section := trim . " \n\r\t" }}
+    {{ if $section }}
+      {{ $lines := split $section "\n" }}
+      {{ $heading := trim (index $lines 0) " \n\r\t" }}
+      {{ $body := trim (delimit (after 1 $lines) "\n") " \n\r\t" }}
+      {{ $items = $items | append (dict "heading" $heading "body" $body) }}
+    {{ end }}
+  {{ end }}
+
+  {{ if ge (len $items) 1 }}
+    {{ $hero := index $items 0 }}
+    <section class="home-hero">
+      <div class="home-hero__image" aria-hidden="true">
+        <img src="{{ "images/site/field-data.svg" | relURL }}" alt="">
+      </div>
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          {{ $hero.body | markdownify }}
+        </div>
+        <div class="home-hero__actions">
+          <a class="button" href="{{ "about/" | relLangURL }}">{{ .Site.Params.read_more }}</a>
+          <a class="button button--secondary" href="{{ "research/" | relLangURL }}">{{ range where .Site.Menus.main "PageRef" "/research" }}{{ .Name }}{{ end }}</a>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if ge (len $items) 2 }}
+    {{ $about := index $items 1 }}
+    <section class="home-section home-section--about">
+      <div class="home-section__inner home-section__inner--split">
+        <div class="section-heading">
+          <p>{{ .Site.Params.partner_label }}</p>
+          <h2>{{ $about.heading }}</h2>
+        </div>
+        <div class="prose">
+          {{ $about.body | markdownify }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if ge (len $items) 3 }}
+    {{ $research := index $items 2 }}
+    <section class="home-section home-section--research">
+      <div class="home-section__inner">
+        <div class="section-heading">
+          <h2>{{ $research.heading }}</h2>
+        </div>
+        <div class="research-list prose">
+          {{ $research.body | markdownify }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if ge (len $items) 4 }}
+    {{ $glance := index $items 3 }}
+    <section class="home-section home-section--glance">
+      <div class="home-section__inner home-section__inner--split">
+        <div class="section-heading">
+          <h2>{{ $glance.heading }}</h2>
+        </div>
+        <div class="prose table-wrap">
+          {{ $glance.body | markdownify }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ $newsPages := (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+  <section class="home-section home-section--news">
+    <div class="home-section__inner">
+      <div class="section-heading section-heading--row">
+        <h2>{{ .Site.Params.latest_news }}</h2>
+        <a href="{{ "news/" | relLangURL }}">{{ .Site.Params.all_news }}</a>
+      </div>
+      {{ if $newsPages }}
+        <div class="listing-grid listing-grid--compact">
+          {{ range first 3 $newsPages }}
+            <article class="listing-card">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            </article>
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="muted">{{ .Site.Params.no_news }}</p>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

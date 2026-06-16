@@ -1,0 +1,131 @@
+# メンバー一覧 / Member list
+#
+# Codex: /members ページはこのファイルをループして生成してください（ハードコード禁止）。
+#        org ごとにグループ化し、各 org 内は記載順を維持します。
+#        photo はプレースホルダーです。実際の写真は後日差し替えます。
+#        id は個人ページの member_id と対応します。slug は URL に使います。
+#        profile_ja / profile_en を追加すると個人ページに紹介文として表示されます。
+#        status は current または alumni。start_month / end_month は YYYY-MM 形式です。
+#        current の end_month は空のままにすると「現在 / Present」と表示されます。
+#
+# NOTE (重要): ローマ字表記は一般的な転写です。公式表記・本人希望と
+#              異なる場合があるため、公開前に各自に確認してください。
+#              特定教授/特定准教授/特定助教 = Program-Specific Professor /
+#              Associate Professor / Assistant Professor（京都大学の英語表記に準拠）。
+
+orgs:
+  - id: yanmar
+    name_ja: "ヤンマーアグリ株式会社"
+    name_en: "Yanmar Agri Co., Ltd."
+  - id: kyoto
+    name_ja: "京都大学大学院農学研究科"
+    name_en: "Graduate School of Agriculture, Kyoto University"
+
+members:
+  - id: "shigemi-hidaka"
+    slug: "shigemi-hidaka"
+    name_ja: "日髙 茂實"
+    name_en: "Shigemi Hidaka"
+    title_ja: "特定教授"
+    title_en: "Program-Specific Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "masayuki-fujiwara"
+    slug: "masayuki-fujiwara"
+    name_ja: "藤原 正幸"
+    name_en: "Masayuki Fujiwara"
+    title_ja: "特定准教授"
+    title_en: "Program-Specific Associate Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "nobuaki-tanaka"
+    slug: "nobuaki-tanaka"
+    name_ja: "田中 伸明"
+    name_en: "Nobuaki Tanaka"
+    title_ja: "特定助教"
+    title_en: "Program-Specific Assistant Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "tetsuji-tanaka"
+    slug: "tetsuji-tanaka"
+    name_ja: "田中 徹士"
+    name_en: "Tetsuji Tanaka"
+    title_ja: "特定助教"
+    title_en: "Program-Specific Assistant Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "hiroaki-wakisaka"
+    slug: "hiroaki-wakisaka"
+    name_ja: "脇坂 裕昭"
+    name_en: "Hiroaki Wakisaka"
+    title_ja: "特定助教"
+    title_en: "Program-Specific Assistant Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "gao-tianqi"
+    slug: "gao-tianqi"
+    name_ja: "Gao Tianqi"
+    name_en: "Gao Tianqi"
+    title_ja: "研究員"
+    title_en: "Researcher"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "rumiko-kamiya"
+    slug: "rumiko-kamiya"
+    name_ja: "神谷 るみ子"
+    name_en: "Rumiko Kamiya"
+    title_ja: "秘書"
+    title_en: "Secretary"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "jean-keiko-putri"
+    slug: "jean-keiko-putri"
+    name_ja: "Jean Keiko Putri"
+    name_en: "Jean Keiko Putri"
+    title_ja: "学生（修士2年）"
+    title_en: "Student (M2)"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"
+
+  - id: "itagaki-kaori"
+    slug: "itagaki-kaori"
+    name_ja: "板垣 芳"
+    name_en: "ITAGAKI Kaori"
+    title_ja: "特定助教"
+    title_en: "Program-Specific Assistant Professor"
+    org: yanmar
+    status: current
+    start_month: "2025-02"
+    end_month: ""
+    photo: "images/members/placeholder.svg"

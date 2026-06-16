@@ -1,0 +1,8 @@
+{{ $current := . }}
+<div class="language-switcher" aria-label="Language">
+  {{ range .AllTranslations }}
+    {{ if ne .Language.Lang $current.Site.Language.Lang }}
+      <a href="{{ .RelPermalink }}">{{ $current.Site.Params.language_switch_label | default .Language.Label }}</a>
+    {{ end }}
+  {{ end }}
+</div>

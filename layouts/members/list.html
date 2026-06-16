@@ -1,0 +1,41 @@
+{{ define "main" }}
+  {{ $lang := .Site.Language.Lang }}
+  {{ $currentMembers := slice }}
+  {{ $alumniMembers := slice }}
+  {{ range hugo.Data.members.members }}
+    {{ $status := .status | default "current" }}
+    {{ if eq $status "alumni" }}
+      {{ $alumniMembers = $alumniMembers | append . }}
+    {{ else }}
+      {{ $currentMembers = $currentMembers | append . }}
+    {{ end }}
+  {{ end }}
+  <section class="page-shell members-page">
+    <div class="page-shell__inner">
+      <div class="prose page-intro">
+        {{ .Content }}
+      </div>
+
+      <div class="member-filter" data-member-filter-root>
+        <div class="member-filter__tabs" role="tablist" aria-label="{{ .Title }}">
+          <button class="member-filter__tab is-active" type="button" role="tab" id="members-tab-current" aria-selected="true" aria-controls="members-panel-current" data-member-filter-tab="current">
+            {{ .Site.Params.current_members_label }} <span>{{ len $currentMembers }}</span>
+          </button>
+          <button class="member-filter__tab" type="button" role="tab" id="members-tab-alumni" aria-selected="false" aria-controls="members-panel-alumni" data-member-filter-tab="alumni">
+            {{ .Site.Params.alumni_members_label }} <span>{{ len $alumniMembers }}</span>
+          </button>
+        </div>
+
+        <section class="member-category is-active" id="members-panel-current" role="tabpanel" aria-labelledby="members-tab-current" data-member-filter-panel="current">
+          <h2>{{ .Site.Params.current_members_label }}</h2>
+          {{ partial "member-category.html" (dict "members" $currentMembers "orgs" hugo.Data.members.orgs "lang" $lang "site" .Site) }}
+        </section>
+
+        <section class="member-category" id="members-panel-alumni" role="tabpanel" aria-labelledby="members-tab-alumni" data-member-filter-panel="alumni">
+          <h2>{{ .Site.Params.alumni_members_label }}</h2>
+          {{ partial "member-category.html" (dict "members" $alumniMembers "orgs" hugo.Data.members.orgs "lang" $lang "site" .Site) }}
+        </section>
+      </div>
+    </div>
+  </section>
+{{ end }}

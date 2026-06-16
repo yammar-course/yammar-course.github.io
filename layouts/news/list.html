@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ $pages := .Pages.ByDate.Reverse }}
+  <section class="page-shell news-page">
+    <div class="page-shell__inner">
+      <div class="prose page-intro">
+        {{ .Content }}
+      </div>
+      {{ if $pages }}
+        <div class="listing-grid">
+          {{ range $pages }}
+            <article class="listing-card listing-card--news">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+              <p>{{ .Summary }}</p>
+            </article>
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="muted">{{ .Site.Params.no_news }}</p>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

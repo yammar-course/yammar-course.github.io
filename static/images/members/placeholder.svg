@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Member photo placeholder">
+  <rect width="160" height="160" fill="#edf4ee"/>
+  <path d="M0 126c24-16 47-23 70-21 31 2 52 21 90 10v45H0Z" fill="#d7e7d7"/>
+  <path d="M0 145c28-18 59-25 92-20 24 4 45 14 68 9v26H0Z" fill="#c7dac8"/>
+  <circle cx="80" cy="62" r="28" fill="#9eb6a5"/>
+  <path d="M34 142c5-27 24-43 46-43s41 16 46 43Z" fill="#7c9a84"/>
+  <path d="M28 44h104M20 82h120M44 24v112M116 24v112" stroke="#ffffff" stroke-opacity=".44" stroke-width="2"/>
+</svg>

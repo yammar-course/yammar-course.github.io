@@ -1,0 +1,140 @@
+# hugo.toml
+#
+# UTF-8 / Hugo native multilingual / static files only.
+#
+# GitHub Pages production URL.
+baseURL = "https://yammar-course.github.io/"
+
+# ▼ 京都大学サブドメイン承認後にここへ差し替える ▼
+# baseURL = "https://<subdomain>.kyoto-u.ac.jp/"
+
+title = "ヤンマーデータ駆動型サステナブル農業講座"
+enableRobotsTXT = true
+summaryLength = 24
+disableKinds = ["taxonomy", "term"]
+
+# 言語設定 -------------------------------------------------------------
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = false # 日本語をルートで配信
+
+[languages]
+  [languages.ja]
+    label = "日本語"
+    locale = "ja"
+    weight = 1
+    contentDir = "content"
+    title = "ヤンマーデータ駆動型サステナブル農業講座"
+    [languages.ja.params]
+      description = "京都大学大学院農学研究科とヤンマーアグリによる産学共同講座"
+      short_title = "データ駆動型サステナブル農業講座"
+      menu_label = "メニュー"
+      language_switch_label = "English"
+      partner_label = "連携機関"
+      skip_link = "本文へ移動"
+      read_more = "詳しく見る"
+      latest_news = "ニュース"
+      all_news = "ニュース一覧"
+      no_news = "ニュースは準備中です。"
+      coming_soon = "準備中"
+      profile_label = "プロフィール"
+      affiliation_label = "所属"
+      title_label = "職名"
+      period_label = "在籍期間"
+      period_present = "現在"
+      current_members_label = "現在のメンバー"
+      alumni_members_label = "OB・OG"
+      back_to_members = "メンバー一覧へ"
+
+  [languages.en]
+    label = "English"
+    locale = "en"
+    weight = 2
+    contentDir = "content"
+    title = "Yanmar Data-Driven Sustainable Agriculture Course"
+    [languages.en.params]
+      description = "A Kyoto University × Yanmar Agri university–industry joint course"
+      short_title = "Data-Driven Sustainable Agriculture Course"
+      menu_label = "Menu"
+      language_switch_label = "日本語"
+      partner_label = "Partners"
+      skip_link = "Skip to content"
+      read_more = "Read more"
+      latest_news = "News"
+      all_news = "All news"
+      no_news = "News coming soon."
+      coming_soon = "Coming soon"
+      profile_label = "Profile"
+      affiliation_label = "Affiliation"
+      title_label = "Title"
+      period_label = "Period"
+      period_present = "Present"
+      current_members_label = "Current members"
+      alumni_members_label = "Alumni"
+      back_to_members = "Back to members"
+
+# メニュー -------------------------------------------------------------
+[[languages.ja.menus.main]]
+  name = "ホーム"
+  pageRef = "/"
+  weight = 1
+[[languages.ja.menus.main]]
+  name = "講座について"
+  pageRef = "/about"
+  weight = 2
+[[languages.ja.menus.main]]
+  name = "研究テーマ"
+  pageRef = "/research"
+  weight = 3
+[[languages.ja.menus.main]]
+  name = "メンバー"
+  pageRef = "/members"
+  weight = 4
+[[languages.ja.menus.main]]
+  name = "ニュース"
+  pageRef = "/news"
+  weight = 5
+[[languages.ja.menus.main]]
+  name = "アクセス"
+  pageRef = "/contact"
+  weight = 6
+
+[[languages.en.menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 1
+[[languages.en.menus.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Research"
+  pageRef = "/research"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Members"
+  pageRef = "/members"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "News"
+  pageRef = "/news"
+  weight = 5
+[[languages.en.menus.main]]
+  name = "Access"
+  pageRef = "/contact"
+  weight = 6
+
+# 出力・その他 --------------------------------------------------------
+[params]
+  # パートナーリンク（ロゴ埋め込みは承認待ちのため不可。テキストリンクのみ可）
+  partner_kyoto_url = "https://www.kais.kyoto-u.ac.jp/japanese/"
+  partner_yanmar_url = "https://www.yanmar.com/jp/"
+  partner_kyoto_name_ja = "京都大学大学院農学研究科"
+  partner_kyoto_name_en = "Graduate School of Agriculture, Kyoto University"
+  partner_yanmar_name_ja = "ヤンマー"
+  partner_yanmar_name_en = "Yanmar"
+
+[pagination]
+  pagerSize = 10
+
+[markup.goldmark.renderer]
+  unsafe = true # 表組みやプレースホルダーコメントを通すため

@@ -1,0 +1,35 @@
+{{- $members := .members -}}
+{{- $orgs := .orgs -}}
+{{- $lang := .lang -}}
+{{- $site := .site -}}
+{{- if $members -}}
+  {{- range $orgs -}}
+    {{- $org := . -}}
+    {{- $orgName := index $org (printf "name_%s" $lang) -}}
+    {{- $orgMembers := where $members "org" $org.id -}}
+    {{- if $orgMembers -}}
+      <section class="member-org">
+        <div class="section-heading">
+          <h3>{{ $orgName }}</h3>
+        </div>
+        <div class="member-grid">
+          {{ range $orgMembers }}
+            {{ $name := index . (printf "name_%s" $lang) }}
+            {{ $title := index . (printf "title_%s" $lang) }}
+            {{ $href := printf "members/%s/" .slug | relLangURL }}
+            <a class="member-card member-card--link" href="{{ $href }}">
+              <img src="{{ .photo | relURL }}" alt="{{ $name }}" width="160" height="160" loading="lazy">
+              <div>
+                <h4>{{ $name }}</h4>
+                <p>{{ $title }}</p>
+                <p class="member-card__period">{{ partial "member-period.html" (dict "member" . "site" $site) }}</p>
+              </div>
+            </a>
+          {{ end }}
+        </div>
+      </section>
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  <p class="muted">{{ $site.Params.coming_soon }}</p>
+{{- end -}}

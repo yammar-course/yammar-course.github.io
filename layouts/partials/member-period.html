@@ -1,0 +1,9 @@
+{{- $member := .member -}}
+{{- $site := .site -}}
+{{- $start := index $member "start_month" | default "" -}}
+{{- $end := index $member "end_month" | default "" -}}
+{{- if $start -}}
+  {{ replace $start "-" "." }} - {{ if $end }}{{ replace $end "-" "." }}{{ else }}{{ $site.Params.period_present }}{{ end }}
+{{- else -}}
+  {{- $site.Params.coming_soon -}}
+{{- end -}}

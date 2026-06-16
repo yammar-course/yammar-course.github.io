@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article class="page-shell news-article">
+    <div class="page-shell__inner">
+      <a class="back-link" href="{{ "news/" | relLangURL }}">{{ .Site.Params.all_news }}</a>
+      <header class="article-header">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+{{ end }}

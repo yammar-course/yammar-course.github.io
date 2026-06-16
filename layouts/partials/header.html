@@ -1,0 +1,41 @@
+{{ $current := . }}
+<a class="skip-link" href="#main-content">{{ .Site.Params.skip_link }}</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }}">
+      <span class="site-brand__marks" aria-hidden="true">
+        <span class="partner-logo-placeholder"><!-- partner logo: pending approval --></span>
+        <span class="partner-logo-placeholder"><!-- partner logo: pending approval --></span>
+      </span>
+      <span class="site-brand__text">
+        <span class="site-brand__kicker">{{ .Site.Params.partner_label }}</span>
+        <span class="site-brand__title">{{ .Site.Params.short_title }}</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="visually-hidden">{{ .Site.Params.menu_label }}</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="{{ .Site.Params.menu_label }}">
+      <ul>
+        {{ range .Site.Menus.main }}
+          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          <li>
+            <a href="{{ .URL }}"{{ if $active }} aria-current="page" class="is-active"{{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+        {{ range .AllTranslations }}
+          {{ if ne .Language.Lang $current.Site.Language.Lang }}
+            <li class="primary-nav__language">
+              <a href="{{ .RelPermalink }}">{{ $current.Site.Params.language_switch_label | default .Language.Label }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+
+    {{ partial "language-switcher.html" . }}
+  </div>
+</header>

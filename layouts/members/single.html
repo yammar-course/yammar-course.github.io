@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{ $lang := .Site.Language.Lang }}
+  {{ $matches := where hugo.Data.members.members "id" .Params.member_id }}
+  {{ $member := index $matches 0 }}
+  {{ if $member }}
+    {{ $name := index $member (printf "name_%s" $lang) }}
+    {{ $title := index $member (printf "title_%s" $lang) }}
+    {{ $orgMatches := where hugo.Data.members.orgs "id" $member.org }}
+    {{ $org := index $orgMatches 0 }}
+    {{ $orgName := index $org (printf "name_%s" $lang) }}
+    {{ $profile := index $member (printf "profile_%s" $lang) }}
+    <article class="page-shell member-profile-page">
+      <div class="page-shell__inner">
+        <a class="back-link" href="{{ "members/" | relLangURL }}">{{ .Site.Params.back_to_members }}</a>
+        <header class="member-profile">
+          <img src="{{ $member.photo | relURL }}" alt="{{ $name }}" width="180" height="180">
+          <div>
+            <p class="member-profile__org">{{ $orgName }}</p>
+            <h1>{{ $name }}</h1>
+            <p class="member-profile__title">{{ $title }}</p>
+            <p class="member-profile__period">{{ .Site.Params.period_label }}: {{ partial "member-period.html" (dict "member" $member "site" .Site) }}</p>
+          </div>
+        </header>
+        <dl class="member-facts">
+          <div>
+            <dt>{{ .Site.Params.affiliation_label }}</dt>
+            <dd>{{ $orgName }}</dd>
+          </div>
+          <div>
+            <dt>{{ .Site.Params.title_label }}</dt>
+            <dd>{{ $title }}</dd>
+          </div>
+          <div>
+            <dt>{{ .Site.Params.period_label }}</dt>
+            <dd>{{ partial "member-period.html" (dict "member" $member "site" .Site) }}</dd>
+          </div>
+        </dl>
+        <section class="member-profile__body prose">
+          <h2>{{ .Site.Params.profile_label }}</h2>
+          {{ with $profile }}
+            {{ . | markdownify }}
+          {{ else }}
+            <p class="muted">{{ $.Site.Params.coming_soon }}</p>
+          {{ end }}
+        </section>
+      </div>
+    </article>
+  {{ else }}
+    <article class="page-shell">
+      <div class="page-shell__inner prose">
+        <h1>{{ .Title }}</h1>
+        <p class="muted">{{ .Site.Params.coming_soon }}</p>
+      </div>
+    </article>
+  {{ end }}
+{{ end }}
