@@ -20,6 +20,9 @@ orgs:
   - id: kyoto
     name_ja: "京都大学大学院農学研究科"
     name_en: "Graduate School of Agriculture, Kyoto University"
+  - id: staff
+    name_ja: "スタッフ"
+    name_en: "Staff"
 
 members:
   - id: "shigemi-hidaka"
@@ -100,7 +103,7 @@ members:
     name_en: "Rumiko Kamiya"
     title_ja: "秘書"
     title_en: "Secretary"
-    org: yanmar
+    org: staff
     status: current
     start_month: "2025-02"
     end_month: ""
