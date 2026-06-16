@@ -6,7 +6,7 @@
   {{- range $orgs -}}
     {{- $org := . -}}
     {{- $orgName := index $org (printf "name_%s" $lang) -}}
-    {{- $orgMembers := where $members "org" $org.id -}}
+    {{- $orgMembers := sort (where $members "org" $org.id) "sort_order" "asc" -}}
     {{- if $orgMembers -}}
       <section class="member-org">
         <div class="section-heading">
