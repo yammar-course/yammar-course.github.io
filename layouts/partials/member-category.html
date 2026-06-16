@@ -18,7 +18,7 @@
             {{ $title := index . (printf "title_%s" $lang) }}
             {{ $href := printf "members/%s/" .slug | relLangURL }}
             <a class="member-card member-card--link" href="{{ $href }}">
-              <img src="{{ .photo | relURL }}" alt="{{ $name }}" width="160" height="160" loading="lazy">
+              {{ partial "member-photo.html" (dict "member" . "name" $name "variant" "card") }}
               <div>
                 <h4>{{ $name }}</h4>
                 <p>{{ $title }}</p>

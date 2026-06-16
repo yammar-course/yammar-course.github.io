@@ -13,7 +13,7 @@
       <div class="page-shell__inner">
         <a class="back-link" href="{{ "members/" | relLangURL }}">{{ .Site.Params.back_to_members }}</a>
         <header class="member-profile">
-          <img src="{{ $member.photo | relURL }}" alt="{{ $name }}" width="180" height="180">
+          {{ partial "member-photo.html" (dict "member" $member "name" $name "variant" "profile") }}
           <div>
             <p class="member-profile__org">{{ $orgName }}</p>
             <h1>{{ $name }}</h1>

@@ -1,0 +1,26 @@
+{{- $member := .member -}}
+{{- $name := .name -}}
+{{- $variant := .variant | default "card" -}}
+{{- $placeholder := "images/members/placeholder.svg" -}}
+{{- $photo := $member.photo | default $placeholder -}}
+{{- $settings := dict
+  "card" (dict "process" "320x320 Center webp q85" "width" 160 "height" 160 "loading" "lazy")
+  "profile" (dict "process" "480x480 Center webp q85" "width" 180 "height" 180 "loading" "eager")
+-}}
+{{- $current := index $settings $variant | default (index $settings "card") -}}
+{{- $resource := resources.Get $photo -}}
+{{- $staticPath := printf "static/%s" $photo -}}
+{{- $src := $placeholder | relURL -}}
+{{- with $resource -}}
+  {{- if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") -}}
+    {{- $processed := .Fill (index $current "process") -}}
+    {{- $src = $processed.RelPermalink -}}
+  {{- else -}}
+    {{- $src = .RelPermalink -}}
+  {{- end -}}
+{{- else -}}
+  {{- if fileExists $staticPath -}}
+    {{- $src = $photo | relURL -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ $name }}" width="{{ index $current "width" }}" height="{{ index $current "height" }}" loading="{{ index $current "loading" }}" decoding="async">
