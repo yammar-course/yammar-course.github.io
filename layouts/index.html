@@ -20,7 +20,11 @@
       </div>
       <div class="home-hero__inner">
         <div class="home-hero__copy">
-          {{ $hero.body | markdownify }}
+          {{ $heroBody := $hero.body | markdownify }}
+          {{ if eq .Site.Language.Lang "ja" }}
+            {{ $heroBody = replace $heroBody ">ヤンマーデータ駆動型サステナブル農業講座</h1>" ">ヤンマーデータ駆動型<br>サステナブル農業講座</h1>" }}
+          {{ end }}
+          {{ $heroBody | safeHTML }}
         </div>
         <div class="home-hero__actions">
           <a class="button" href="{{ "about/" | relLangURL }}">{{ .Site.Params.read_more }}</a>
