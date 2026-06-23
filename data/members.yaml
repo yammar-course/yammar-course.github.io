@@ -189,8 +189,8 @@ members:
     slug: "itagaki-kaori"
     name_ja: "板垣 芳"
     name_en: "Itagaki Kaori"
-    title_ja: "特定助教"
-    title_en: "Program-Specific Assistant Professor"
+    title_ja: ""
+    title_en: ""
     org: yanmar
     status: current
     sort_order: 33

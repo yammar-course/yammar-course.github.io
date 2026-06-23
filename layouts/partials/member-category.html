@@ -21,7 +21,9 @@
               {{ partial "member-photo.html" (dict "member" . "name" $name "variant" "card") }}
               <div>
                 <h4>{{ $name }}</h4>
-                <p>{{ $title }}</p>
+                {{ with $title }}
+                  <p>{{ . }}</p>
+                {{ end }}
                 <p class="member-card__period">{{ partial "member-period.html" (dict "member" . "site" $site) }}</p>
               </div>
             </a>

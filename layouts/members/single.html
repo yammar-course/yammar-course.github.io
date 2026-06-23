@@ -17,7 +17,9 @@
           <div>
             <p class="member-profile__org">{{ $orgName }}</p>
             <h1>{{ $name }}</h1>
-            <p class="member-profile__title">{{ $title }}</p>
+            {{ with $title }}
+              <p class="member-profile__title">{{ . }}</p>
+            {{ end }}
             <p class="member-profile__period">{{ .Site.Params.period_label }}: {{ partial "member-period.html" (dict "member" $member "site" .Site) }}</p>
           </div>
         </header>
