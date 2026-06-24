@@ -6,8 +6,11 @@ title: "Access & Contact"
 
 ## Location
 
-Graduate School of Agriculture, Kyoto University
-Kitashirakawa Oiwake-cho, Sakyo-ku, Kyoto 606-8502, Japan
+Room 716, Faculty of Engineering Integrated Research Building, North Wing
+
+Kyoto University Yoshida Main Campus
+
+Yoshida-honmachi, Sakyo-ku, Kyoto 606-8501, Japan
 
 {{< google-map
   src="https://www.google.com/maps?q=2QGM%2BC6%20Kyoto&output=embed"
@@ -18,11 +21,10 @@ Kitashirakawa Oiwake-cho, Sakyo-ku, Kyoto 606-8502, Japan
 
 ## Demonstration field
 
-Kizu Farm, Graduate School of Agriculture, Kyoto University
+Kizu Farm, Graduate School of Agriculture, Kyoto University, and Yanmar demonstration fields
 
 ## Contact
 
-For inquiries about this course, please contact the Graduate School of Agriculture, Kyoto University.
+TEL: 075-753-9204
 
-<!-- Codex: replace with confirmed email / phone once available (placeholder) -->
-(Contact details coming soon)
+E-mail: hidaka.shigemi.6y@kyoto-u.ac.jp
