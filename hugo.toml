@@ -50,10 +50,10 @@ defaultContentLanguageInSubdir = false # 日本語をルートで配信
     locale = "en"
     weight = 2
     contentDir = "content"
-    title = "Yanmar Data-Driven Sustainable Agriculture Course"
+    title = "Laboratory of Yanmar Data-Driven Sustainable Agriculture"
     [languages.en.params]
       description = "A Kyoto University × Yanmar Agri university–industry joint course"
-      short_title = "Yanmar Data-Driven Sustainable Agriculture Course"
+      short_title = "Laboratory of Yanmar Data-Driven Sustainable Agriculture"
       menu_label = "Menu"
       language_switch_label = "日本語"
       partner_label = "University–Industry Joint Course"

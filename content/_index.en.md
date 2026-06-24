@@ -1,12 +1,12 @@
 ---
 # English homepage content (approved).
 # Codex: use this text as-is; do not rewrite.
-title: "Yanmar Data-Driven Sustainable Agriculture Course"
+title: "Laboratory of Yanmar Data-Driven Sustainable Agriculture"
 ---
 
 ## Hero
 
-# Yanmar Data-Driven Sustainable Agriculture Course
+# Laboratory of Yanmar Data-Driven Sustainable Agriculture
 
 Shaping the future of sustainable food production through data and technology.
 
@@ -30,7 +30,7 @@ Over five years, from February 2025 to January 2030, we work to establish a data
 
 | Item | Detail |
 |---|---|
-| Course | Yanmar Data-Driven Sustainable Agriculture Course |
+| Course | Laboratory of Yanmar Data-Driven Sustainable Agriculture |
 | Period | February 1, 2025 – January 31, 2030 (5 years) |
 | Locations | Graduate School of Agriculture, Kyoto University / Kizu Farm / Yanmar Agri R&D sites, etc. |
 | Partners | Graduate School of Agriculture, Kyoto University · Yanmar Agri Co., Ltd. |

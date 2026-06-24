@@ -18,7 +18,7 @@ Beyond further advancing autonomous-driving and electrification technologies, th
 
 | Item | Detail |
 |---|---|
-| Course name | Yanmar Data-Driven Sustainable Agriculture Course |
+| Course name | Laboratory of Yanmar Data-Driven Sustainable Agriculture |
 | Period | February 1, 2025 – January 31, 2030 (5 years) |
 | Locations | Graduate School of Agriculture, Kyoto University / Kizu Farm / Yanmar Agri R&D sites, etc. |
 | Partner organizations | Graduate School of Agriculture, Kyoto University · Yanmar Agri Co., Ltd. |
