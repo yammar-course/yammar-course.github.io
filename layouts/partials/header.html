@@ -4,8 +4,12 @@
   <div class="site-header__inner">
     <a class="site-brand" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }}">
       <span class="site-brand__marks" aria-hidden="true">
-        <span class="partner-logo-placeholder"><!-- partner logo: pending approval --></span>
-        <span class="partner-logo-placeholder"><!-- partner logo: pending approval --></span>
+        <span class="partner-logo">
+          <img src="{{ "images/site/ku-logo.png" | relURL }}" alt="" width="500" height="500">
+        </span>
+        <span class="partner-logo">
+          <img src="{{ "images/site/yanmar-logo.png" | relURL }}" alt="" width="600" height="600">
+        </span>
       </span>
       <span class="site-brand__text">
         <span class="site-brand__kicker">{{ .Site.Params.partner_label }}</span>

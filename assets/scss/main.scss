@@ -138,20 +138,34 @@ img {
   display: none;
 }
 
-.partner-logo-placeholder {
-  display: inline-block;
+.partner-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
-  border: 1px dashed #9eb0a6;
+  padding: 4px;
+  border: 1px solid rgba(234, 215, 217, 0.9);
   border-radius: 4px;
-  background: linear-gradient(135deg, #fff, var(--color-brand-soft));
+  background: #fff;
 }
 
-.partner-logo-placeholder--footer {
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.partner-logo--footer {
   width: 56px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.34);
+  padding: 5px;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: #fff;
+}
+
+.partner-logo--footer:hover {
+  border-color: rgba(255, 255, 255, 0.72);
 }
 
 .site-brand__text {
