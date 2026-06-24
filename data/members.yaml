@@ -15,9 +15,18 @@
 #              Associate Professor / Assistant Professor（京都大学の英語表記に準拠）。
 
 orgs:
-  - id: yanmar
-    name_ja: "ヤンマー"
+  - id: yanmar-agri
+    name_ja: "ヤンマーアグリ株式会社"
     name_en: "Yanmar Agri Co., Ltd."
+  - id: yanmar-holdings
+    name_ja: "ヤンマーホールディングス株式会社"
+    name_en: "Yanmar Holdings Co., Ltd."
+  - id: yanmar-energy
+    name_ja: "ヤンマーエネルギーシステム株式会社"
+    name_en: "Yanmar Energy System Co., Ltd."
+  - id: yanmar-green
+    name_ja: "ヤンマーグリーンシステム株式会社"
+    name_en: "Yanmar Green System Co., Ltd."
   - id: kyoto
     name_ja: "京都大学大学院農学研究科"
     name_en: "Graduate School of Agriculture, Kyoto University"
@@ -32,7 +41,7 @@ members:
     name_en: "Shigemi Hidaka"
     title_ja: "特定教授"
     title_en: "Program-Specific Professor"
-    org: yanmar
+    org: yanmar-agri
     status: current
     sort_order: 10
     start_month: "2025-02"
@@ -45,7 +54,7 @@ members:
     name_en: "Masayuki Fujiwara"
     title_ja: "特定准教授"
     title_en: "Program-Specific Associate Professor"
-    org: yanmar
+    org: yanmar-holdings
     status: current
     sort_order: 20
     start_month: "2025-02"
@@ -58,7 +67,7 @@ members:
     name_en: "Nobuaki Tanaka"
     title_ja: "特定助教"
     title_en: "Program-Specific Assistant Professor"
-    org: yanmar
+    org: yanmar-green
     status: current
     sort_order: 30
     start_month: "2025-02"
@@ -71,7 +80,7 @@ members:
     name_en: "Tetsuji Tanaka"
     title_ja: "特定助教"
     title_en: "Program-Specific Assistant Professor"
-    org: yanmar
+    org: yanmar-agri
     status: current
     sort_order: 31
     start_month: "2025-02"
@@ -84,7 +93,7 @@ members:
     name_en: "Hiroaki Wakisaka"
     title_ja: "特定助教"
     title_en: "Program-Specific Assistant Professor"
-    org: yanmar
+    org: yanmar-energy
     status: current
     sort_order: 32
     start_month: "2025-02"
@@ -95,9 +104,9 @@ members:
     slug: "kondo-naoshi"
     name_ja: "近藤 直"
     name_en: "Naoshi Kondo"
-    title_ja: "顧問"
-    title_en: "Advisor"
-    org: staff
+    title_ja: "名誉教授"
+    title_en: "Professor Emeritus"
+    org: kyoto
     status: current
     sort_order: 55
     start_month: "2025-02"
@@ -147,9 +156,9 @@ members:
     slug: "itagaki-kaori"
     name_ja: "板垣 芳"
     name_en: "Itagaki Kaori"
-    title_ja: ""
-    title_en: ""
-    org: yanmar
+    title_ja: "研究員"
+    title_en: "Researcher"
+    org: yanmar-agri
     status: current
     sort_order: 33
     start_month: "2025-02"
