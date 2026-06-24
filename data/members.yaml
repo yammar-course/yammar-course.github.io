@@ -47,6 +47,7 @@ members:
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "トラクタ、コンバインの開発、自動化・電動化"
 
   - id: "masayuki-fujiwara"
     slug: "masayuki-fujiwara"
