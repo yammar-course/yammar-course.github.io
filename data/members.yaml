@@ -21,9 +21,6 @@ orgs:
   - id: kyoto
     name_ja: "京都大学大学院農学研究科"
     name_en: "Graduate School of Agriculture, Kyoto University"
-  - id: global-environment
-    name_ja: "京都大学大学院地球環境学堂"
-    name_en: "Graduate School of Global Environmental Studies, Kyoto University"
   - id: staff
     name_ja: "スタッフ"
     name_en: "Staff"
@@ -94,54 +91,15 @@ members:
     end_month: ""
     photo: "images/members/placeholder.svg"
 
-  - id: "iida-norihisa"
-    slug: "iida-norihisa"
-    name_ja: "飯田 訓久"
-    name_en: "Norihisa Iida"
-    title_ja: "教授"
-    title_en: "Professor"
-    org: kyoto
-    status: current
-    sort_order: 10
-    start_month: "2025-02"
-    end_month: ""
-    photo: "images/members/placeholder.svg"
-
-  - id: "noguchi-ryozo"
-    slug: "noguchi-ryozo"
-    name_ja: "野口 良造"
-    name_en: "Ryozo Noguchi"
-    title_ja: "教授"
-    title_en: "Professor"
-    org: kyoto
-    status: current
-    sort_order: 11
-    start_month: "2025-02"
-    end_month: ""
-    photo: "images/members/placeholder.svg"
-
   - id: "kondo-naoshi"
     slug: "kondo-naoshi"
     name_ja: "近藤 直"
     name_en: "Naoshi Kondo"
-    title_ja: "教授"
-    title_en: "Professor"
-    org: kyoto
+    title_ja: "顧問"
+    title_en: "Advisor"
+    org: staff
     status: current
-    sort_order: 12
-    start_month: "2025-02"
-    end_month: ""
-    photo: "images/members/placeholder.svg"
-
-  - id: "nakano-ryuhei"
-    slug: "nakano-ryuhei"
-    name_ja: "中野 龍平"
-    name_en: "Ryuhei Nakano"
-    title_ja: "教授"
-    title_en: "Professor"
-    org: kyoto
-    status: current
-    sort_order: 13
+    sort_order: 10
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
@@ -194,19 +152,6 @@ members:
     org: yanmar
     status: current
     sort_order: 33
-    start_month: "2025-02"
-    end_month: ""
-    photo: "images/members/placeholder.svg"
-
-  - id: "saizen-izuru"
-    slug: "saizen-izuru"
-    name_ja: "西前 出"
-    name_en: "Izuru Saizen"
-    title_ja: "教授"
-    title_en: "Professor"
-    org: global-environment
-    status: current
-    sort_order: 10
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
