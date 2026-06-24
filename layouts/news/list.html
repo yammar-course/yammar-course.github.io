@@ -6,12 +6,17 @@
         {{ .Content }}
       </div>
       {{ if $pages }}
-        <div class="listing-grid">
+        <div class="news-list">
           {{ range $pages }}
-            <article class="listing-card listing-card--news">
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-              <p>{{ .Summary }}</p>
+            {{ $summary := .Params.description | default (.Summary | plainify) }}
+            <article class="news-list__item">
+              <time class="news-list__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+              <div class="news-list__content">
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ with $summary }}
+                  <p>{{ . | plainify | truncate 220 }}</p>
+                {{ end }}
+              </div>
             </article>
           {{ end }}
         </div>
