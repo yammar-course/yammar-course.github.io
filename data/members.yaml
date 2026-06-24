@@ -46,7 +46,7 @@ members:
     sort_order: 10
     start_month: "2025-02"
     end_month: ""
-    photo: "images/members/placeholder.svg"
+    photo: "images/members/shigemi-hidaka.jpg"
     profile_ja: "トラクタ、コンバインの開発、自動化・電動化"
     profile_en: "Development, automation, and electrification of tractors and combines."
 
@@ -132,7 +132,7 @@ members:
     org: kyoto
     status: current
     sort_order: 40
-    start_month: "2025-02"
+    start_month: "2026-05"
     end_month: ""
     photo: "images/members/placeholder.svg"
 
@@ -158,7 +158,7 @@ members:
     org: kyoto
     status: current
     sort_order: 50
-    start_month: "2025-02"
+    start_month: "2026-04"
     end_month: ""
     photo: "images/members/placeholder.svg"
 
