@@ -48,6 +48,7 @@ members:
     end_month: ""
     photo: "images/members/placeholder.svg"
     profile_ja: "トラクタ、コンバインの開発、自動化・電動化"
+    profile_en: "Development, automation, and electrification of tractors and combines."
 
   - id: "masayuki-fujiwara"
     slug: "masayuki-fujiwara"
@@ -61,6 +62,8 @@ members:
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "植物生理、病理、微生物研究"
+    profile_en: "Research on plant physiology, pathology, and microorganisms."
 
   - id: "nobuaki-tanaka"
     slug: "nobuaki-tanaka"
@@ -74,6 +77,8 @@ members:
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "ポストハーベスト、施設園芸機器の開発"
+    profile_en: "Development of post-harvest and protected horticulture equipment."
 
   - id: "tetsuji-tanaka"
     slug: "tetsuji-tanaka"
@@ -87,6 +92,8 @@ members:
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "農業機械データ、衛星画像などの解析"
+    profile_en: "Analysis of agricultural machinery data, satellite imagery, and related data."
 
   - id: "hiroaki-wakisaka"
     slug: "hiroaki-wakisaka"
@@ -100,6 +107,8 @@ members:
     start_month: "2025-02"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "ガス化発電、バイオ炭製造装置の開発"
+    profile_en: "Development of gasification power generation systems and biochar production equipment."
 
   - id: "kondo-naoshi"
     slug: "kondo-naoshi"
