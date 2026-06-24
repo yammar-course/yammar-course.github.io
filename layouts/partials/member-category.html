@@ -1,37 +1,24 @@
 {{- $members := .members -}}
-{{- $orgs := .orgs -}}
 {{- $lang := .lang -}}
 {{- $site := .site -}}
 {{- if $members -}}
-  {{- range $orgs -}}
-    {{- $org := . -}}
-    {{- $orgName := index $org (printf "name_%s" $lang) -}}
-    {{- $orgMembers := sort (where $members "org" $org.id) "sort_order" "asc" -}}
-    {{- if $orgMembers -}}
-      <section class="member-org">
-        <div class="section-heading">
-          <h3>{{ $orgName }}</h3>
-        </div>
-        <div class="member-grid">
-          {{ range $orgMembers }}
-            {{ $name := index . (printf "name_%s" $lang) }}
-            {{ $title := index . (printf "title_%s" $lang) }}
-            {{ $href := printf "members/%s/" .slug | relLangURL }}
-            <a class="member-card member-card--link" href="{{ $href }}">
-              {{ partial "member-photo.html" (dict "member" . "name" $name "variant" "card") }}
-              <div>
-                <h4>{{ $name }}</h4>
-                {{ with $title }}
-                  <p>{{ . }}</p>
-                {{ end }}
-                <p class="member-card__period">{{ partial "member-period.html" (dict "member" . "site" $site) }}</p>
-              </div>
-            </a>
+  <div class="member-grid">
+    {{ range sort $members "sort_order" "asc" }}
+      {{ $name := index . (printf "name_%s" $lang) }}
+      {{ $title := index . (printf "title_%s" $lang) }}
+      {{ $href := printf "members/%s/" .slug | relLangURL }}
+      <a class="member-card member-card--link" href="{{ $href }}">
+        {{ partial "member-photo.html" (dict "member" . "name" $name "variant" "card") }}
+        <div>
+          <h4>{{ $name }}</h4>
+          {{ with $title }}
+            <p>{{ . }}</p>
           {{ end }}
+          <p class="member-card__period">{{ partial "member-period.html" (dict "member" . "site" $site) }}</p>
         </div>
-      </section>
-    {{- end -}}
-  {{- end -}}
+      </a>
+    {{ end }}
+  </div>
 {{- else -}}
   <p class="muted">{{ $site.Params.coming_soon }}</p>
 {{- end -}}

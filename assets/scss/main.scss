@@ -680,15 +680,6 @@ img {
   line-height: 1.35;
 }
 
-.member-org {
-  padding-top: 28px;
-  border-top: 1px solid var(--color-border);
-}
-
-.member-org + .member-org {
-  margin-top: 40px;
-}
-
 .member-card {
   display: grid;
   grid-template-columns: 74px 1fr;

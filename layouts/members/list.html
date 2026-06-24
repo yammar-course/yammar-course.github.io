@@ -28,12 +28,12 @@
 
         <section class="member-category is-active" id="members-panel-current" role="tabpanel" aria-labelledby="members-tab-current" data-member-filter-panel="current">
           <h2>{{ .Site.Params.current_members_label }}</h2>
-          {{ partial "member-category.html" (dict "members" $currentMembers "orgs" hugo.Data.members.orgs "lang" $lang "site" .Site) }}
+          {{ partial "member-category.html" (dict "members" $currentMembers "lang" $lang "site" .Site) }}
         </section>
 
         <section class="member-category" id="members-panel-alumni" role="tabpanel" aria-labelledby="members-tab-alumni" data-member-filter-panel="alumni">
           <h2>{{ .Site.Params.alumni_members_label }}</h2>
-          {{ partial "member-category.html" (dict "members" $alumniMembers "orgs" hugo.Data.members.orgs "lang" $lang "site" .Site) }}
+          {{ partial "member-category.html" (dict "members" $alumniMembers "lang" $lang "site" .Site) }}
         </section>
       </div>
     </div>
