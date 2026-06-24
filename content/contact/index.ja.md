@@ -10,7 +10,12 @@ title: "アクセス・お問い合わせ"
 
 京都大学吉田本部構内　工学部物理系校舎（北棟）716号室
 
-[Google Mapsで開く](https://www.google.com/maps/search/?api=1&query=2QGM%2BC6%20Kyoto)
+{{< google-map
+  src="https://www.google.com/maps?q=2QGM%2BC6%20Kyoto&output=embed"
+  href="https://www.google.com/maps/search/?api=1&query=2QGM%2BC6%20Kyoto"
+  label="Google Mapsで開く"
+  title="Google Maps: 2QGM+C6 Kyoto"
+>}}
 
 ## 実証フィールド
 

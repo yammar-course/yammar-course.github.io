@@ -9,7 +9,12 @@ title: "Access & Contact"
 Graduate School of Agriculture, Kyoto University
 Kitashirakawa Oiwake-cho, Sakyo-ku, Kyoto 606-8502, Japan
 
-[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=2QGM%2BC6%20Kyoto)
+{{< google-map
+  src="https://www.google.com/maps?q=2QGM%2BC6%20Kyoto&output=embed"
+  href="https://www.google.com/maps/search/?api=1&query=2QGM%2BC6%20Kyoto"
+  label="Open in Google Maps"
+  title="Google Maps: 2QGM+C6 Kyoto"
+>}}
 
 ## Demonstration field
 

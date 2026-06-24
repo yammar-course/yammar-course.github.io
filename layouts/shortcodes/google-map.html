@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $href := .Get "href" -}}
+{{- $label := .Get "label" | default "Open in Google Maps" -}}
+{{- $title := .Get "title" | default $label -}}
+<figure class="map-embed">
+  <div class="map-embed__frame">
+    <iframe src="{{ $src }}" title="{{ $title }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+  {{ with $href }}
+    <figcaption><a href="{{ . }}" target="_blank" rel="noopener">{{ $label }}</a></figcaption>
+  {{ end }}
+</figure>
