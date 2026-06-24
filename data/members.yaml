@@ -16,8 +16,8 @@
 
 orgs:
   - id: yanmar
-    name_ja: "ヤンマーアグリ株式会社"
-    name_en: "Yanmar Agri Co., Ltd."
+    name_ja: "ヤンマー"
+    name_en: "Yanmar"
   - id: kyoto
     name_ja: "京都大学大学院農学研究科"
     name_en: "Graduate School of Agriculture, Kyoto University"
