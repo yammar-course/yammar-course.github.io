@@ -161,6 +161,8 @@ members:
     start_month: "2026-04"
     end_month: ""
     photo: "images/members/placeholder.svg"
+    profile_ja: "test"
+    profile_en: "test"
 
   - id: "itagaki-kaori"
     slug: "itagaki-kaori"
